@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 599px) {
+  .profile {
+    width: 120px;
+    height: 120px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 599px) {
+  .profile {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-height: 599px) {
+  .scroll-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 170px;
+  }
+}
+@media screen and (max-height: 599px) and (min-height: 410px) {
+  .scroll-down {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 100px;
+  }
+}
+@media screen and (max-height: 409px) {
+  .scroll-down {
+    display: none;
+  }
+}
+.home {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  align-items: center;
+  height: calc(100vh + 63px);
+  z-index: 1000;
+}
+.greeting {
+  margin: -63px 20px 0 20px;
+}
+.hide {
+  display: none;
+}
+.profile {
+  border-radius: 50%;
+  border: 0.2rem solid #0be779;
+}
+.greeting-text {
+  margin: 15px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.name {
+  color: hsl(0, 0%, 100%);
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  max-width: 60px;
+  margin: 20px auto 0 auto;
+}
+.links a,
+.links img {
+  width: 50px;
+  height: 50px;
+}
+.scroll-down-element {
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+/* About CSS */
+.about {
+  background: white;
+}
+.about-text {
+  width: 100%;
+  max-width: 600px;
+  color: black;
+}
+h2.about-text-title {
+  width: 100%;
+  max-width: 600px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+.about-text > ul {
+  list-style-type: none;
+}
+.about-text > ul > li {
+  margin-bottom: 10px;
+}
+.typewriter {
+  display: flex;
+  align-items: center;
+}
+.typewriter-start {
+  padding-right: 5px;
+}
+.typewriter > p {
+  margin: 0;
+}
+.textLink {
+  color: #0be779;
+  cursor: pointer;
+}
+.location-wrapper {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid white;
+  width: 70%;
+}
+.skills-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+.skills {
+  position: relative;
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin: 0 auto;
+  width: 90%;
+}
+.skill-bar-wrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  background-color: white;
+  border-radius: 2px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.skill-bar {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  background-color: #0be779;
+  border-radius: 2px 0px 0px 2px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .about-content {
+    display: flex;
+    justify-content: space-evenly;
   }
-  to {
-    transform: rotate(360deg);
+  .skill-name {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px 0px 0px 2px;
+    left: 0;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #39b175;
+    font-weight: 600;
+    color: white;
+  }
+}
+@media screen and (max-width: 959px) and (min-width: 600px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill-name {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px 0px 0px 2px;
+    left: 0;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    background-color: #39b175;
+    font-weight: 600;
+    color: white;
+  }
+}
+@media screen and (max-width: 599px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills {
+    width: 100%;
+  }
+  .skill-name {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px 0px 0px 2px;
+    left: 0;
+    width: 65px;
+    height: 30px;
+    font-size: 10px;
+    background-color: #39b175;
+    font-weight: 600;
+    color: white;
+  }
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
   }
 }
